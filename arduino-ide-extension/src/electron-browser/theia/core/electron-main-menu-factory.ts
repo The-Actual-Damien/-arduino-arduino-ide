@@ -28,7 +28,7 @@ export class ElectronMainMenuFactory extends TheiaElectronMainMenuFactory {
         if (!!submenu && !(submenu instanceof remote.Menu)) {
             const [/* about */, /* settings */, ...rest] = submenu;
             const about = this.fillMenuTemplate([], this.menuProvider.getMenu(ArduinoMenus.HELP__ABOUT_GROUP));
-            const settings = this.fillMenuTemplate([], this.menuProvider.getMenu(ArduinoMenus.FILE__SETTINGS_GROUP));
+            const settings = this.fillMenuTemplate([], this.menuProvider.getMenu(ArduinoMenus.FILE__PREFERENCES_GROUP));
             return {
                 label,
                 submenu: [
